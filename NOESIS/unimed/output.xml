@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on darwin)" generated="20201028 23:07:21.901" rpa="false">
+<suite id="s1" name="Consulta" source="/Users/tatianemary/Downloads/NOESIS/unimed/consulta.robot">
+<test id="s1-t1" name="Realizar Consulta">
+<kw name="Dado que acesso o site da Unimed">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201028 23:07:22.028" level="INFO">Opening browser 'chrome' to base url 'https://www.unimed.coop.br/'.</msg>
+<status status="PASS" starttime="20201028 23:07:22.027" endtime="20201028 23:07:26.467"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[contains(text(),'Guia Médico')]</arg>
+</arguments>
+<msg timestamp="20201028 23:07:26.468" level="INFO">Clicking element 'xpath://a[contains(text(),'Guia Médico')]'.</msg>
+<status status="PASS" starttime="20201028 23:07:26.467" endtime="20201028 23:07:26.520"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20201028 23:07:28.521" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201028 23:07:26.520" endtime="20201028 23:07:28.522"></status>
+</kw>
+<status status="PASS" starttime="20201028 23:07:22.027" endtime="20201028 23:07:28.522"></status>
+</kw>
+<kw name="Quando realizo uma consulta de Médicos com Especialidade Ginecologista no Rio de Janeiro">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:campo_pesquisa</arg>
+<arg>Médico</arg>
+</arguments>
+<msg timestamp="20201028 23:07:28.523" level="INFO">Typing text 'Médico' into text field 'id:campo_pesquisa'.</msg>
+<status status="PASS" starttime="20201028 23:07:28.523" endtime="20201028 23:07:28.709"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_pesquisar</arg>
+</arguments>
+<msg timestamp="20201028 23:07:28.709" level="INFO">Clicking element 'id:btn_pesquisar'.</msg>
+<status status="PASS" starttime="20201028 23:07:28.709" endtime="20201028 23:07:28.768"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20201028 23:07:30.769" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201028 23:07:28.769" endtime="20201028 23:07:30.770"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:css-k71zgk</arg>
+</arguments>
+<msg timestamp="20201028 23:07:30.770" level="INFO">Clicking element 'class:css-k71zgk'.</msg>
+<status status="PASS" starttime="20201028 23:07:30.770" endtime="20201028 23:07:30.825"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:css-tymxwi</arg>
+</arguments>
+<msg timestamp="20201028 23:07:30.826" level="INFO">Clicking element 'class:css-tymxwi'.</msg>
+<status status="PASS" starttime="20201028 23:07:30.826" endtime="20201028 23:07:30.972"></status>
+</kw>
+<status status="PASS" starttime="20201028 23:07:28.523" endtime="20201028 23:07:30.972"></status>
+</kw>
+<kw name="Então visualizo o resultado com a Especialidade e Cidade">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201028 23:07:31.400" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201028 23:07:30.972" endtime="20201028 23:07:31.400"></status>
+</kw>
+<status status="PASS" starttime="20201028 23:07:30.972" endtime="20201028 23:07:31.400"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201028 23:07:31.400" endtime="20201028 23:07:31.485"></status>
+</kw>
+<status status="PASS" starttime="20201028 23:07:22.027" endtime="20201028 23:07:31.486" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Realizar Consulta de Médicos no Rio de Janeiro exceto os de São Paulo">
+<kw name="Dado que acesso o site da Unimed">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20201028 23:07:31.487" level="INFO">Opening browser 'chrome' to base url 'https://www.unimed.coop.br/'.</msg>
+<status status="PASS" starttime="20201028 23:07:31.487" endtime="20201028 23:07:41.701"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[contains(text(),'Guia Médico')]</arg>
+</arguments>
+<msg timestamp="20201028 23:07:41.701" level="INFO">Clicking element 'xpath://a[contains(text(),'Guia Médico')]'.</msg>
+<status status="PASS" starttime="20201028 23:07:41.701" endtime="20201028 23:07:42.547"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20201028 23:07:44.549" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201028 23:07:42.547" endtime="20201028 23:07:44.550"></status>
+</kw>
+<status status="PASS" starttime="20201028 23:07:31.487" endtime="20201028 23:07:44.550"></status>
+</kw>
+<kw name="Quando realizo uma consulta de Médicos com Especialidade Ginecologista no Rio de Janeiro">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:campo_pesquisa</arg>
+<arg>Médico</arg>
+</arguments>
+<msg timestamp="20201028 23:07:44.551" level="INFO">Typing text 'Médico' into text field 'id:campo_pesquisa'.</msg>
+<status status="PASS" starttime="20201028 23:07:44.551" endtime="20201028 23:07:44.697"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id:btn_pesquisar</arg>
+</arguments>
+<msg timestamp="20201028 23:07:44.698" level="INFO">Clicking element 'id:btn_pesquisar'.</msg>
+<status status="PASS" starttime="20201028 23:07:44.698" endtime="20201028 23:07:44.854"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20201028 23:07:46.857" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201028 23:07:44.854" endtime="20201028 23:07:46.857"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:css-k71zgk</arg>
+</arguments>
+<msg timestamp="20201028 23:07:46.858" level="INFO">Clicking element 'class:css-k71zgk'.</msg>
+<status status="PASS" starttime="20201028 23:07:46.858" endtime="20201028 23:07:46.914"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class:css-tymxwi</arg>
+</arguments>
+<msg timestamp="20201028 23:07:46.915" level="INFO">Clicking element 'class:css-tymxwi'.</msg>
+<status status="PASS" starttime="20201028 23:07:46.914" endtime="20201028 23:07:47.055"></status>
+</kw>
+<status status="PASS" starttime="20201028 23:07:44.550" endtime="20201028 23:07:47.056"></status>
+</kw>
+<kw name="Então visualizo o resultado com ausência dos Médicos de São Paulo">
+<msg timestamp="20201028 23:07:47.059" level="FAIL">No keyword with name 'Então visualizo o resultado com ausência dos Médicos de São Paulo' found.</msg>
+<status status="FAIL" starttime="20201028 23:07:47.059" endtime="20201028 23:07:47.059"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201028 23:07:47.059" endtime="20201028 23:07:47.148"></status>
+</kw>
+<status status="FAIL" starttime="20201028 23:07:31.486" endtime="20201028 23:07:47.148" critical="yes">No keyword with name 'Então visualizo o resultado com ausência dos Médicos de São Paulo' found.</status>
+</test>
+<doc>Acessar
+Sendo usuário do site
+Quero efetuar uma consulta
+Para que retorne um resultado</doc>
+<status status="FAIL" starttime="20201028 23:07:21.903" endtime="20201028 23:07:47.149"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Consulta">Consulta</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
