@@ -1,9 +1,6 @@
 # noesis
 DesafioQA
 
-Objetivo do Desafio
-Verificar suas habilidades em elaborar cenários de testes e em programação necessárias para automatização dos testes.
-
 Desafio 1
 
 Criar um projeto de automação utilizando BDD e em linguagem de programação de sua preferência os cenários para as duas funcionalidades abaixo:
@@ -18,6 +15,16 @@ Criar um projeto de automação utilizando BDD e em linguagem de programação d
 • Realizar uma pesquisa de médicos no Rio de Janeiro.
 • Validar nas páginas 1, 2, e 3 do resultado, NÃO apresentação do resultado com cidade São Paulo
 
+Automacao desenvolvida em Robot Framework com biblioteca Selenium e linguagem python.
+Arquivo a ser rodado: consulta.robot
+arquivo base: base.robot
+Gera evidencias
+Gera Relatorio dos tests cases
+
+Infelizmente nao consegui desenvolver tudo pois o site da unimed e bem complicado de pegar os elementos. Inclusive pedi ajuda a um amigo desenvolvedor e ele tambem nao conseguiu encontrar os parametros.
+Enfim, sorry.
+
+O Postman eu nao tive tempo de olhar...
 
 Desafio 2
 
@@ -31,9 +38,4 @@ ID_DO_FILME e API_KEY deverão ser passados por variaveis GLOBAIS
 • Idioma do filme
 
 2 - No endpoint validar o response para: • Busca filme inexistente
-
-
-Processo de submissão
-• O candidato deverá implementar a solução para os 3 desafios e subir a implementação para Git ou Bitbucket.
-• Após término, enviar via e-mail a url do repositório contendo o resultado do desafio.
  
